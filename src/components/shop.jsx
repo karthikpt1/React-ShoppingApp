@@ -4,6 +4,7 @@ import Products from "./products";
 import productData from "./../data/products.json";
 import CartProducts from "./cartProducts";
 
+// not used
 class ShopOnline extends Component {
   state = {
     products: productData.products,

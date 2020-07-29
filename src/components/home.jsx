@@ -4,6 +4,7 @@ import history from "./history";
 class home extends Component {
   state = {};
 
+  //render the home page, display the products category and take the user to online shop
   render() {
     return (
       <main role="main">

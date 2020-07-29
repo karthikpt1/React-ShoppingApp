@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 class Header extends Component {
   state = {};
+
+  //render header
   render() {
     return (
       <header className="blog-header mb-4 mt-4 py-6">

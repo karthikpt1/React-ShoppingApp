@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 class Footer extends Component {
   state = {};
+
+  //render footer
   render() {
     return (
       <footer className="my-5 pt-5 text-muted text-center text-small">

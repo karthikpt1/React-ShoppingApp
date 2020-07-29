@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import { PlusCircleIcon, MinusCircleIcon } from "./icons";
 
 class Product extends Component {
+  // display the products in online shop
   render() {
     return (
       <div className="col-md-4">

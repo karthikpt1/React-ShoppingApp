@@ -8,15 +8,18 @@ class checkout extends Component {
     CartProducts: [],
   };
 
+  // refresh cart products from local storage
   componentDidMount() {
     this.refreshCartFromLocalStorage();
   }
 
+  // refresh cart products from local storage
   refreshCartFromLocalStorage = () => {
     const cartProducts = JSON.parse(localStorage.getItem("cartItems"));
     this.setState({ CartProducts: cartProducts });
   };
 
+  //handle the final checkout
   handleSubmit = (event) => {
     alert("Order is submitted successfully! your refernce number is BER123");
     let cart = [];
@@ -26,6 +29,7 @@ class checkout extends Component {
     event.preventDefault();
   };
 
+  //return CART and checkout form
   render() {
     return (
       <div className="container">

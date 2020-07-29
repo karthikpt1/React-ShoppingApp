@@ -5,6 +5,7 @@ import history from "./history";
 
 class CartProducts extends Component {
   render() {
+    //render the ul to hold the cart elements and check out button based on items in cart
     return (
       <div>
         <ul className="list-group mb-3">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class CartProduct extends Component {
   render() {
+    // return elements displayed inside the cart
     return (
       <li className="list-group-item d-flex justify-content-between lh-condensed">
         <div>

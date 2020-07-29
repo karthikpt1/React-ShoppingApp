@@ -9,10 +9,12 @@ class OnlineShop extends Component {
     products: productData.products,
   };
 
+  //refresh cvart from local storage
   componentDidMount() {
     this.refreshCartFromLocalStorage();
   }
 
+  //display products and cart
   render() {
     return (
       <div className="container">
@@ -80,6 +82,7 @@ class OnlineShop extends Component {
     );
   }
 
+  // handle adding elements to cart and save in local storage
   handleIncrement = (product) => {
     const products = [...this.state.products];
     const index = products.indexOf(product);
@@ -91,6 +94,7 @@ class OnlineShop extends Component {
     });
   };
 
+  //handle removing elements to cart and save in local storage
   handleDecrement = (product) => {
     const products = [...this.state.products];
     const index = products.indexOf(product);
@@ -105,6 +109,7 @@ class OnlineShop extends Component {
     });
   };
 
+  //save cart to local storage
   saveCartToLocalStorage = () => {
     let cart = [...this.state.products];
     cart = cart.filter((c) => c.value >> 0);
@@ -112,6 +117,7 @@ class OnlineShop extends Component {
     localStorage.setItem("cartItems", cartString);
   };
 
+  //search product in a arrray of products
   searchProduct = (idkey, productArray) => {
     for (var i = 0; i < productArray.length; i++) {
       if (productArray[i].id === idkey) {
@@ -120,9 +126,9 @@ class OnlineShop extends Component {
     }
   };
 
+  // handle reset cart action and save the cart to local storage
   resetCart = () => {
     const products = [...this.state.products];
-
     products.forEach((product) => {
       product.value = 0;
       product.amount = 0;
@@ -132,6 +138,7 @@ class OnlineShop extends Component {
     });
   };
 
+  // refresh the cart from local storage
   refreshCartFromLocalStorage = () => {
     const cartProducts = JSON.parse(localStorage.getItem("cartItems"));
     let products = [...this.state.products];
@@ -148,6 +155,7 @@ class OnlineShop extends Component {
     this.setState({ products: updatedProducts });
   };
 
+  //adding up a value in array
   sumProperty = (arr, type) => {
     return arr.reduce((amount, obj) => {
       return amount + obj[type];

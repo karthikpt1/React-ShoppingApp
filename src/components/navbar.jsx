@@ -13,6 +13,7 @@ import { Router } from "react-router";
 class NavBar extends Component {
   state = {};
 
+  //render navigation bar with routers
   render() {
     return (
       <Router history={history}>

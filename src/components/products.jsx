@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Product from "./product";
 
 class Products extends Component {
+  //display product container in online shop
   render() {
     return (
       <div className="album py-5 bg-light">
