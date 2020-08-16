@@ -140,19 +140,25 @@ class OnlineShop extends Component {
 
   // refresh the cart from local storage
   refreshCartFromLocalStorage = () => {
-    const cartProducts = JSON.parse(localStorage.getItem("cartItems"));
-    let products = [...this.state.products];
-    let updatedProducts = [];
-    products.forEach((product) => {
-      if (!this.searchProduct(product.id, cartProducts)) {
-        updatedProducts.push(product);
-      }
-    });
-    cartProducts.forEach((cartProduct) => {
-      updatedProducts.push(cartProduct);
-    });
+    if (localStorage.getItem("cartItems")) {
+      const cartProducts = JSON.parse(localStorage.getItem("cartItems"));
+      let products = [...this.state.products];
+      let updatedProducts = [];
+      products.forEach((product) => {
+        if (!this.searchProduct(product.id, cartProducts)) {
+          updatedProducts.push(product);
+        }
+      });
+      cartProducts.forEach((cartProduct) => {
+        updatedProducts.push(cartProduct);
+      });
 
-    this.setState({ products: updatedProducts });
+      this.setState({ products: updatedProducts });
+    } else {
+      let cart = [];
+      let cartString = JSON.stringify(cart);
+      localStorage.setItem("cartItems", cartString);
+    }
   };
 
   //adding up a value in array
