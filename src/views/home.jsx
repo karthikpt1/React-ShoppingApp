@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import history from "./history";
+import history from "../components/history";
+import "../css/home.css";
 
 class home extends Component {
   state = {};
@@ -25,10 +26,6 @@ class home extends Component {
               <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                   <img
-                    style={{
-                      maxHeight: "250px",
-                      minHeight: "250px",
-                    }}
                     className=".img-fluid img-thumbnail"
                     src={require("../images/darkChoc.jpg")}
                     alt=""
@@ -54,10 +51,6 @@ class home extends Component {
               <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                   <img
-                    style={{
-                      maxHeight: "250px",
-                      minHeight: "250px",
-                    }}
                     className=".img-fluid img-thumbnail"
                     src={require("../images/milkChoc.jpg")}
                     alt=""
@@ -83,10 +76,6 @@ class home extends Component {
               <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                   <img
-                    style={{
-                      maxHeight: "250px",
-                      minHeight: "250px",
-                    }}
                     className=".img-fluid img-thumbnail"
                     src={require("../images/nuts.jpg")}
                     alt=""

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { Button } from "react-bootstrap";
 import { PlusCircleIcon, MinusCircleIcon } from "./icons";
+import "../css/product.css";
 
 class Product extends Component {
   // display the products in online shop
@@ -10,11 +11,6 @@ class Product extends Component {
       <div className="col-md-4">
         <div className="card mb-4 shadow-sm">
           <img
-            style={{
-              maxHeight: "200px",
-
-              minHeight: "200px",
-            }}
             className=".img-fluid img-thumbnail"
             src={require("../images/products/" +
               this.props.product.image +

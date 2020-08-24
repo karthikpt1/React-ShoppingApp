@@ -1,0 +1,15 @@
+/* Applies to all Images displayed on the Products page*/
+img {
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.img-fluid {
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.img-thumbnail {
+  max-height: 200px;
+  min-height: 200px;
+}

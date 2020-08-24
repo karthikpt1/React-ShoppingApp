@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import OnlineShop from "./onlineShop";
-import Checkout from "./checkout";
-import Home from "./home";
+import OnlineShop from "../views/onlineShop";
+import Checkout from "../views/checkout";
+import Home from "../views/home";
 import history from "./history";
 import Error from "./error";
 

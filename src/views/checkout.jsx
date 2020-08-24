@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CartProduct from "./cartProduct";
-import { CartIcon } from "./icons";
-import history from "./history";
+import CartProduct from "../components/cartProduct";
+import { CartIcon } from "../components/icons";
+import history from "../components/history";
 
 class checkout extends Component {
   state = {

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import Products from "./products";
-import productData from "./../data/products.json";
-import CartProducts from "./cartProducts";
-import { CartIcon } from "./icons";
+import Products from "../components/products";
+import productData from "../data/products.json";
+import CartProducts from "../components/cartProducts";
+import { CartIcon } from "../components/icons";
 
 class OnlineShop extends Component {
   state = {
     products: productData.products,
   };
 
-  //refresh cvart from local storage
+  //refresh cart from local storage after the component loads
   componentDidMount() {
     this.refreshCartFromLocalStorage();
   }

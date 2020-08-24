@@ -1,0 +1,6 @@
+/* Applies to all Images displayed on the Home page*/
+img {
+  max-height: 250px;
+  min-height: 250px;
+  border-radius: 8px;
+}
