@@ -8,7 +8,7 @@ class checkout extends Component {
     CartProducts: [],
   };
 
-  // refresh cart products from local storage
+  // refresh cart products from local storage after component loads
   componentDidMount() {
     this.refreshCartFromLocalStorage();
   }
